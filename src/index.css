@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+hr {
+    color: whitesmoke;
+}
+
+.sidebar {
+    background-color: #212121;
+
+    .Nav_Link {
+        color: #666666;
+        display: flex;
+        align-items: center;
+        color: white;
+
+    }
+
+    .testActive {
+        background-color: rgba(61, 210, 204, 0.4);
+        border-right: 5px solid #3DD2CC;
+        border-radius: 5px;
+        color: #fff;
+    }
+
+    .Nav_Link:hover {
+        border-radius: 5px;
+        background-color: rgba(61, 210, 204, 0.4);
+        border-right: 5px solid #3DD2CC;
+        color: #fff;
+    }
+}
+
+.card-hover {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #877979;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.card-hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.card-hover:hover::after {
+    opacity: 0.5;
+
+}
+
+.card-hover:hover::before {
+    opacity: 1;
+}
+
+.form-check-input:checked {
+    background-color: #3dd2cc !important;
+    border-color: #3dd2cc !important;
+}
+
+.form-check-input:focus {
+    border-color: #1f2d43;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgb(0 54 134 / 20%) !important;
+}
+
+.no-spin::-webkit-outer-spin-button,
+.no-spin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    /* Ensure it's above other content */
+    min-width: 300px;
+    /* You can adjust the width */
+    font-size: 18px;
+    /* Adjust font size */
+}
+
+.custom-toast .toast-body {
+    font-size: 20px;
+    /* Increase text size */
+    padding: 20px;
+    /* Increase padding for larger Toast */
+}
+
+.custom-toast.bg-success {
+    background-color: #3dd2cc !important;
+    /* Green color */
+}
+
+.custom-toast.bg-success .toast-body {
+    color: #fff;
+    /* Set text color to white */
+}
+
+
+/* .banner {
+    /* .btn-light-play {
+        border-radius: 15px;
+        background: rgba(232, 232, 232, 0.10);
+        color: #000;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(2.5px);
+        color: #E8E8E8;
+
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 5px 30px;
+
+    } */
+/* } */
+
+/* 
+@media (min-width: 992px) {
+    .col-sid-lg-2 {
+        flex: 0 0 auto;
+        width: 14%;
+    }
+} */
+.movie-card img {
+    border-radius: 12px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card:hover {
+    transform: scale(1.06);
+    transition: 0.3s ease-in;
+
+}
+
+.admin-view-card i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.add-movie {
+    background-color: #212121;
+    color: #3DD2CC;
+    border: none;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #212121;
+        color: #3DD2CC;
+    }
+
+    &:active {
+        color: #212121 !important;
+    }
+}
+
+
+.icon-btn {
+    background-color: #3DD2CC;
+    color: #212121;
+    border: none;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #3dd2cdc5;
+        color: #212121;
+    }
+
+    &:active {
+        color: #212121 !important;
+    }
+}
+
+.admin-side {
+    .admin-sidebar {
+        .testActive {
+            background-color: rgba(61, 210, 204, 0.4);
+            border-right: 8px solid #3DD2CC;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .admin-side {
+        height: fit-content !important;
+        padding: 20px auto;
+    }
+}
+
+input::placeholder {
+    color: white !important;
+}
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+
+
+.view-table th {
+    color: #3DD2CC;
+}
+
+.font {
+    font-family: Poppins;
+    color: white;
+}
+
+.icon {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.color {
+    color: #3DD2CC;
+}
+
+.sec-color {
+    color: #ccc8c8;
+}
+
+
+.movie-form-wrapper {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* background: linear-gradient(135deg, #1c5554, #279c98, #3DD2CC); */
+    /* padding: 20px; */
+}
+
+.movie-form-container {
+    background-color: #25272a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* width: 100%;
+    max-width: 500px; */
+}
+
+.form-title {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    color: #ced4da;
+}
+
+.form-control,
+.form-select {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #495057;
+    background-color: #495057 !important;
+    color: #fff;
+
+    &::placeholder {
+        background-color: #495057 !important;
+    }
+
+    &:focus {
+        color: #fff;
+        background-color: #495057 !important;
+        border-color: #3DD2CC;
+        box-shadow: 0 0 0 0.2rem rgba(72, 240, 234, 0.453);
+    }
+}
+
+.form-btn1,
+.form-btn2 {
+    background-color: #3DD2CC;
+    padding: 10px 20px !important;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+/* Custom responsive classes */
+
+
+@media (min-width: 1200px) {
+
+    /* md breakpoint */
+    .sidebar {
+        height: 100vh !important;
+        position: sticky;
+        top: 0;
+    }
+}
+
+/* For xs to lg screens - horizontal layout */
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 100%;
+        flex-direction: row !important;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    .sidebar .nav {
+        flex-direction: row !important;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar .Nav {
+        flex-direction: row !important;
+        margin-top: 0 !important;
+        gap: 1rem;
+    }
+
+
+}
+
+@media (max-width: 575.98px) {
+    .sidebar img {
+        width: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-rounded-responsive {
+        border-radius: 0 !important;
+    }
+}
+
+
+
+
+
+
+/* ////////////////////Sta */
+
+.stat-card {
+    width: 170px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    border: 2px solid white;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(180deg, #00eeff, transparent, #02e6f6, transparent);
+    animation: rotateBorder 2s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.stat-card::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: rgb(0, 0, 0);
+    z-index: -1;
+    border-radius: 1rem;
+
+}
+
+/* ///////////////////*/
+
+
+.dash-top {
+    position: relative;
+    background-color: #212121;
+    height: fit-content;
+    margin: 0;
+    overflow: hidden;
+    z-index: 0;
+    /* padding: 1rem; */
+    border-radius: 2rem;
+}
+
+/* Animated rotating border */
+.dash-top::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(180deg,
+            #3dd2cc,
+            transparent,
+            #3dd2cc,
+            transparent);
+    animation: rotateBorder 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+.dash-top::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #212121;
+    border-radius: 2rem;
+    z-index: -1;
+}
+
+.dash-title {
+    margin-top: 5px;
+    color: #3dd2cc;
+    letter-spacing: 2px;
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
